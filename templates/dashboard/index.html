@@ -1,0 +1,20 @@
+{% extends 'partials/base.html' %}
+{% block title %} Home {% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row mt-4">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body" style="align-content: center;">
+                    <form method="POST" style="align-content: center;">
+                        {% csrf_token %}
+                        {{ form }}
+                        <input class="btn btn-success my-1" type="submit" value="Check your Suitable Sport" style="align-content: center;">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
